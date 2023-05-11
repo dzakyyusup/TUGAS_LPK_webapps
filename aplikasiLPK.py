@@ -1,18 +1,16 @@
 import streamlit as st
 
-st.title('_PERHITUNGAN KONSTANTA KESETIMBANGAN_')
 
-
-Kp = st.number_input("Masukkan nilai Kp: ")
-n = st.number_input("Masukkan jumlah mol gas: ")
-V = st.number_input("Masukkan volume gas: ")
-T = st.number_input("Masukkan suhu gas: ")
-R = 8.31 # konstanta gas universal dalam J/mol.K
+Kc = st.number_input("Masukkan nilai Kc: ")
+Δn = st.number_input("Masukkan selisih koefisien: ")
+T = st.number_input("Masukkan suhu gas(Kelvin): ")
+R = 0.082 # konstanta gas universal dalam Liter.atm/mol.K
 tombol = st.button("Tampilkan hasil")
 
 if tombol:
-    Kc = Kp /((R*T)*n)*(V*n)
-    st.success(f'Nilai Konstanta Kesetimbangan Tersebut {Kc}')
+    Kp= Kc*((R*T)**Δn)
+    st.success(f'Nilai Konstanta Kesetimbangan Tersebut {Kp}(atm)')
+    st.balloons()
     
 def add_bg_from_url():
     st.markdown(
@@ -30,5 +28,18 @@ def add_bg_from_url():
 
 add_bg_from_url()
 
+import streamlit as st
+audio_file = open('backsound.ogg','rb')
+audio_bytes = audio_file.read()
+st.audio(audio_bytes, format='audio/ogg')
 
+
+import streamlit as st
+
+
+with st.sidebar:
+    st.image("kp2.jpg")
+    st.header("Definisi Konstanta Kesetimbangan")
+    st.caption("Konstanta kesetimbangan dari suatu reaksi kimia adalah nilai dari hasil bagi reaksinya pada kesetimbangan kimia, suatu keadaan yang didekati oleh sistem kimia dinamis setelah waktu yang cukup telah berlalu di mana komposisinya tidak memiliki kecenderungan terukur terhadap perubahan lebih lanjut.")
+   
 
