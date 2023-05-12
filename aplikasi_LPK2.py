@@ -4,7 +4,8 @@ add_selectbox = st.sidebar.selectbox(
  
 if add_selectbox=="Home":
     st.image("kp2.jpg")
-    st.caption("Konstanta kesetimbangan dari suatu reaksi kimia adalah nilai dari hasil bagi reaksinya pada kesetimbangan kimia, suatu keadaan yang didekati oleh sistem kimia dinamis setelah waktu yang cukup telah berlalu di mana komposisinya tidak memiliki kecenderungan terukur terhadap perubahan lebih lanjut.")
+    st.write('<p style="font-size:25px; color:orange;">Konstanta kesetimbangan dari suatu reaksi kimia adalah nilai dari hasil bagi reaksinya pada kesetimbangan kimia, suatu keadaan yang didekati oleh sistem kimia dinamis setelah waktu yang cukup telah berlalu di mana komposisinya tidak memiliki kecenderungan terukur terhadap perubahan lebih lanjut.</p>',
+             unsafe_allow_html=True)
 
 if add_selectbox=="Kp":  
     Kc = st.number_input("Masukkan nilai Kc: ")
