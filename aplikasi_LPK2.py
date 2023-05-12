@@ -8,7 +8,7 @@ if add_selectbox=="Home":
              unsafe_allow_html=True)
 
 if add_selectbox=="Kp":  
-    Kc = st.number_input("Masukkan nilai Kc: ")
+    Kc = st.number_input("Masukkan nilai Kc(mol/L): ")
     Δn = st.number_input("Masukkan selisih koefisien: ")
     T = st.number_input("Masukkan suhu gas(Kelvin): ")
     R = 0.082 # konstanta gas universal dalam Liter.atm/mol.K
@@ -20,7 +20,7 @@ if add_selectbox=="Kp":
 
     
 if add_selectbox=="Kc":  
-    Kp = st.number_input("Masukkan nilai Kp: ")
+    Kp = st.number_input("Masukkan nilai Kp(atm): ")
     Δn = st.number_input("Masukkan selisih koefisien: ")
     T = st.number_input("Masukkan suhu gas(Kelvin): ")
     R = 0.082 # konstanta gas universal dalam Liter.atm/mol.K
