@@ -24,11 +24,10 @@ if add_selectbox=="Kc":
     T = st.number_input("Masukkan suhu gas(Kelvin): ")
     R = 0.082 # konstanta gas universal dalam Liter.atm/mol.K
     tombol = st.button("Tampilkan hasil")
-    
-if tombol:
-    Kc= Kp/((R*T)**Δn)
-    st.success(f'Nilai Konstanta Kesetimbangan Tersebut {Kc}')
-    st.balloons()
+    if tombol:
+        Kc= Kp/((R*T)**Δn)
+        st.success(f'Nilai Konstanta Kesetimbangan Tersebut {Kc}')
+        st.balloons()
     
 def add_bg_from_url():
     st.markdown(
