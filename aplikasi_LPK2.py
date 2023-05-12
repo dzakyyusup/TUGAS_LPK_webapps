@@ -5,17 +5,17 @@ add_selectbox = st.sidebar.selectbox(
 if add_selectbox=="Home":
     st.image("kp2.jpg")
     st.caption("Konstanta kesetimbangan dari suatu reaksi kimia adalah nilai dari hasil bagi reaksinya pada kesetimbangan kimia, suatu keadaan yang didekati oleh sistem kimia dinamis setelah waktu yang cukup telah berlalu di mana komposisinya tidak memiliki kecenderungan terukur terhadap perubahan lebih lanjut.")
+
 if add_selectbox=="Kp":  
     Kc = st.number_input("Masukkan nilai Kc: ")
     Δn = st.number_input("Masukkan selisih koefisien: ")
     T = st.number_input("Masukkan suhu gas(Kelvin): ")
     R = 0.082 # konstanta gas universal dalam Liter.atm/mol.K
     tombol = st.button("Tampilkan hasil")
-    
-if tombol:
-    Kp= Kc*((R*T)**Δn)
-    st.success(f'Nilai Konstanta Kesetimbangan Tersebut {Kp}(atm)')
-    st.balloons()
+    if tombol:
+        Kp= Kc*((R*T)**Δn)
+        st.success(f'Nilai Konstanta Kesetimbangan Tersebut {Kp}(atm)')
+        st.balloons()
 
     
 if add_selectbox=="Kc":  
