@@ -8,26 +8,26 @@ if add_selectbox=="Home":
              unsafe_allow_html=True)
 
 if add_selectbox=="Kp":  
-    Kc = st.number_input("Masukkan nilai Kc(mol/L): ")
-    Δn = st.number_input("Masukkan selisih koefisien: ")
-    T = st.number_input("Masukkan suhu gas(Kelvin): ")
+    Kc = st.number_input(":orange[Masukkan nilai Kc(mol/L)]: ")
+    Δn = st.number_input(":orange[Masukkan selisih koefisien]: ")
+    T = st.number_input(":orange[Masukkan suhu gas(Kelvin)]: ")
     R = 0.082 # konstanta gas universal dalam Liter.atm/mol.K
     tombol = st.button("Tampilkan hasil")
     if tombol:
         Kp= Kc*((R*T)**Δn)
-        st.success(f'Nilai Konstanta Kesetimbangan Tersebut {Kp}(atm)')
+        st.success(f':orange[Nilai Konstanta Kesetimbangan Tersebut {Kp}(atm)]')
         st.balloons()
 
     
 if add_selectbox=="Kc":  
-    Kp = st.number_input("Masukkan nilai Kp(atm): ")
-    Δn = st.number_input("Masukkan selisih koefisien: ")
-    T = st.number_input("Masukkan suhu gas(Kelvin): ")
+    Kp = st.number_input(":orange[Masukkan nilai Kp(atm)]: ")
+    Δn = st.number_input(":orange[Masukkan selisih koefisien]: ")
+    T = st.number_input(":orange[Masukkan suhu gas(Kelvin)]: ")
     R = 0.082 # konstanta gas universal dalam Liter.atm/mol.K
     tombol = st.button("Tampilkan hasil")
     if tombol:
         Kc= Kp/((R*T)**Δn)
-        st.success(f'Nilai Konstanta Kesetimbangan Tersebut {Kc}')
+        st.success(f':orange[Nilai Konstanta Kesetimbangan Tersebut {Kc}(mol/L)]')
         st.balloons()
     
 def add_bg_from_url():
